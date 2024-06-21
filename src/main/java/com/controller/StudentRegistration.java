@@ -12,12 +12,12 @@ public class StudentRegistration{
 
 	@GetMapping("/boxcricketregistration")
 	public String boxRegistration() {
-		return "BoxCricket";// jsp name
+		return "BoxCricket";
 	}
 
 	@PostMapping("/savereg")
 	public String saveRegistration(BoxCricketReg studentBox, Model model) {
-		// bean ->variable : jsp form
+	
 		System.out.println(studentBox.getStudentName());
 		System.out.println(studentBox.getPlayerType());
 		System.out.println(studentBox.getFoodPreference());
@@ -49,7 +49,7 @@ public class StudentRegistration{
 			return "BoxCricket";
 		} else {
 			// how to send data to jsp from controller ?
-			model.addAttribute("")
+//			model.addAttribute("")
 			model.addAttribute("reg", studentBox);// data name -> data value
 			return "RegDetail";
 		}
