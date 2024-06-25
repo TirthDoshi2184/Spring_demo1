@@ -20,11 +20,12 @@
 		<tr>
 			<th>ProductId</th>
 			<th>ProductName</th>
+			<th>Actions</th>
 		</tr>
 		<%
 		for (EProductBean p : products) {
 			out.print("<tr>");
-			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td>");
+			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td><td><a href='deleteproduct?productId="+p.getProductId()+"'>Delete</a></td>");
 			out.print("</tr>");
 
 		}

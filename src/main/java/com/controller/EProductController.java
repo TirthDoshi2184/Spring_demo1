@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bean.EProductBean;
 import com.dao.productDao;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class EProductController {
@@ -26,7 +28,7 @@ public class EProductController {
 	public String productadd(EProductBean productBean) {
 		
 		product.addProduct(productBean);
-		return "Listproduct";
+		return "redirect:/products";
 		
 	}
 
@@ -37,4 +39,13 @@ public class EProductController {
 		model.addAttribute("products",products);
 		return "NewListproduct";
 	}
+	
+	@GetMapping("/deleteproduct")
+	public String deleteproduct(@RequestParam("productId") Integer productId) {
+
+		System.out.println("delete prouduct() => "+productId);
+		
+		return "redirect:/products";
+	}
+	
 }
