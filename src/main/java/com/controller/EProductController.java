@@ -45,7 +45,24 @@ public class EProductController {
 
 		System.out.println("delete prouduct() => "+productId);
 		
+		product.deleteproductwithId(productId);
 		return "redirect:/products";
 	}
+	
+	@GetMapping("/Deleteproduct")
+	public String DeleteProduct() {
+		return "Deleteproduct";
+	}
+	
+	@PostMapping("/Deleteproductwithname")
+	public String productdelete(EProductBean productBean) {
+		
+		product.deleteproductwithName(productBean.getProductName());
+		return "redirect:/products";
+		
+	}
+	
+	
+	
 	
 }

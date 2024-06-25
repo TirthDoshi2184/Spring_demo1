@@ -15,7 +15,8 @@
 	<%
 	List<EProductBean> products = (List<EProductBean>) request.getAttribute("products");
 	%>
-
+	<a href="Addproduct">Add Product</a>
+	<a href="Deleteproduct">Delete Product By Name</a>
 	<table border="1">
 		<tr>
 			<th>ProductId</th>
