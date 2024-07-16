@@ -1,5 +1,6 @@
 package com.bean;
 
+import org.springframework.web.multipart.MultipartFile;
 public class EProductBean {
 
 	private Integer productId;
@@ -7,8 +8,16 @@ public class EProductBean {
 	private String category;
 	private Integer qty;
 	private Float price;
+	private String masterImage;
 	
 	
+	
+	public String getMasterImage() {
+		return masterImage;
+	}
+	public void setMasterImage(String masterImage) {
+		this.masterImage = masterImage;
+	}
 	public Integer getProductId() {
 		return productId;
 	}
